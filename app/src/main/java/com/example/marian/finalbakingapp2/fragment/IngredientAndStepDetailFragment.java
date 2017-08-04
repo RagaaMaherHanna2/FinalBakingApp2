@@ -92,6 +92,7 @@ public class IngredientAndStepDetailFragment extends Fragment implements View.On
 
             steps = savedInstanceState.getParcelableArrayList(STEPS);
             TwoPane = savedInstanceState.getBoolean(PANES);
+            mPosition = savedInstanceState.getInt(POSITION);
 
             playbackPosition = savedInstanceState.getLong(PLAYBACK_POSITION,0);
             currentWindow = savedInstanceState.getInt(CURRENT_WINDOW_INDEX,0);

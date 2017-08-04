@@ -14,10 +14,10 @@ import android.widget.Toast;
 
 import com.example.marian.finalbakingapp2.R;
 import com.example.marian.finalbakingapp2.adapter.StepAdapter;
+import com.example.marian.finalbakingapp2.database.RecipeContract.RecipeEntry;
 import com.example.marian.finalbakingapp2.fragment.IngredientAndStepDetailFragment;
 import com.example.marian.finalbakingapp2.model.Ingredient;
 import com.example.marian.finalbakingapp2.model.Recipe;
-import com.example.marian.finalbakingapp2.database.RecipeContract.RecipeEntry;
 
 import java.util.ArrayList;
 
@@ -64,8 +64,9 @@ public class StepActivity extends AppCompatActivity implements StepAdapter.OnSte
                     .replace(R.id.ingredientAndStep_Container, fragment)
                     .commit();
         }
+
         else if (TwoPane && position == 0)
-        {
+       {
             IngredientAndStepDetailFragment fragment = new IngredientAndStepDetailFragment();
 
             bundle.putInt(POSITION, position);
@@ -74,8 +75,8 @@ public class StepActivity extends AppCompatActivity implements StepAdapter.OnSte
             fragment.setArguments(bundle);
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.ingredientAndStep_Container, fragment)
-                    .commit();
-        }
+                   .commit();
+       }
         else
         {
             bundle.putInt(POSITION, position);
