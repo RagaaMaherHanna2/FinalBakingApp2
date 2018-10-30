@@ -359,6 +359,11 @@ public class IngredientAndStepDetailFragment extends Fragment implements View.On
     }
 
     @Override
+    public void onRepeatModeChanged(int repeatMode) {
+
+    }
+
+    @Override
     public void onPlayerError(ExoPlaybackException e)
     {
         String errorString = null;
